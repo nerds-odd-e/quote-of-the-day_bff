@@ -1,6 +1,8 @@
 type Quote {
     id: ID!
     content: String!
+    originalAuthor: String!
+    submitter: String!
 }
 
 type Query {
