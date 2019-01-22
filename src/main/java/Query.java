@@ -1,11 +1,10 @@
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+import org.springframework.web.client.RestTemplate;
 
 public class Query implements GraphQLQueryResolver {
     public Quote getQuoteOfTheDay(){
-        Quote quote = new Quote();
-        quote.setContent("It sucks");
-        quote.setOriginalAuthor("Mike Li");
-        quote.setSubmitter("Jackson Zhang");
+        RestTemplate restTemplate = new RestTemplate();
+        Quote quote = restTemplate.getForObject("http://backend:8090/quotes/today", Quote.class);
         return quote;
     }
 }

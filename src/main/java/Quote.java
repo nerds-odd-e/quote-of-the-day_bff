@@ -1,3 +1,6 @@
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote {
     private long id;
     private String content;
@@ -18,5 +21,21 @@ public class Quote {
 
     public void setSubmitter(String submitter) {
         this.submitter = submitter;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public String getOriginalAuthor() {
+        return originalAuthor;
+    }
+
+    public String getSubmitter() {
+        return submitter;
+    }
+
+    public long getId() {
+        return id;
     }
 }
