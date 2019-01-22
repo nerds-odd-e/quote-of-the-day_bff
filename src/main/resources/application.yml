@@ -1,0 +1,5 @@
+graphql:
+  servlet:
+    mapping: /quotegraphql
+    enabled: true
+    corsEnabled: true

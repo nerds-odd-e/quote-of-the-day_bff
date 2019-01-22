@@ -1,0 +1,8 @@
+type Quote {
+    id: ID!
+    content: String!
+}
+
+type Query {
+    getQuoteOfTheDay: Quote!
+}
