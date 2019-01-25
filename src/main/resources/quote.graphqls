@@ -1,8 +1,12 @@
 type Quote {
     id: ID!
-    content: String!
-    originalAuthor: String!
-    submitter: String!
+    Quote: String!
+    Author: String!
+    Contributor: String!
+    Location: String!
+    Date: String!
+    Language: String!
+    ContributionDate: String!
 }
 
 type Query {
