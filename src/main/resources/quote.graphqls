@@ -10,5 +10,5 @@ type Quote {
 }
 
 type Query {
-    getQuoteOfTheDay(date: String!): Quote!
+    getQuoteOfTheDay(Date: String!): Quote!
 }
